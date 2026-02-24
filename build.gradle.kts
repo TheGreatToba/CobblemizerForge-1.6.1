@@ -1,7 +1,6 @@
 plugins {
     id("java")
-    kotlin("jvm") version ("1.9.22")
-    id("fabric-loom") version("1.4-SNAPSHOT")
+    id("fabric-loom") version("1.7.4")
 }
 
 group = "git.dragomordor.cobblemaxer.fabric"
@@ -17,18 +16,18 @@ repositories {
 }
 
 dependencies {
-    minecraft("net.minecraft:minecraft:1.20.1")
-    mappings("net.fabricmc:yarn:1.20.1+build.8:v2")
-    modImplementation("net.fabricmc:fabric-loader:0.14.21")
+    minecraft("com.mojang:minecraft:${property("minecraft_version")}")
+    mappings("net.fabricmc:yarn:${property("yarn_mappings")}:v2")
+    modImplementation("net.fabricmc:fabric-loader:${property("loader_version")}")
 
-    modImplementation("net.fabricmc.fabric-api:fabric-api:0.89.3+1.20.1")
-    modImplementation("net.fabricmc:fabric-language-kotlin:1.10.17+kotlin.1.9.22")
-    modImplementation("com.cobblemon:fabric:1.4.1+1.20.1")
+    modImplementation("net.fabricmc.fabric-api:fabric-api:${property("fabric_version")}")
+    modImplementation("net.fabricmc:fabric-language-kotlin:1.11.0+kotlin.2.0.0")
+    modImplementation("com.cobblemon:fabric:${property("cobblemon_version")}")
 
 }
 
 tasks {
-    compileKotlin {
-        kotlinOptions.jvmTarget = "17"
+    compileJava {
+        options.release.set(21)
     }
 }

@@ -4,8 +4,8 @@ import com.cobblemon.mod.common.api.pokemon.Natures;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Nature;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -18,7 +18,7 @@ public class NatureChangerItem extends  PokemonUseItem{
     private final Nature nature;
 
     public NatureChangerItem(Nature nature) {
-        super(new FabricItemSettings().maxCount(1));
+        super(new Item.Settings().maxCount(1));
         this.nature = nature;
     }
 
@@ -57,14 +57,15 @@ public class NatureChangerItem extends  PokemonUseItem{
 
        // same nature is failed
        if (currentNature==nature) {
-           player.sendMessage(Text.of("Pokémon is already " + natureDisplayNames.get(nature.getDisplayName())));
+           player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon is already " + natureDisplayNames.get(nature.getDisplayName())));
            return ActionResult.FAIL;
        }
 
        // change nature
         pokemon.setNature(nature);
-        player.sendMessage(Text.of("Pokémon is now "+ natureDisplayNames.get(nature.getDisplayName())));
+        player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon is now "+ natureDisplayNames.get(nature.getDisplayName())));
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;
     }
 }
+

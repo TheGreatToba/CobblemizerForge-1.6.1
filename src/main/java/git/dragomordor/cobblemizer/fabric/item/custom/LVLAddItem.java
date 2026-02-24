@@ -4,8 +4,8 @@ import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
 import git.dragomordor.cobblemizer.fabric.config.CobblemizerConfig;
 import git.dragomordor.cobblemizer.fabric.misc.TierRarityClass;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
@@ -15,7 +15,7 @@ public class LVLAddItem extends PokemonUseItem{
 
 
     public LVLAddItem(String tier) {
-        super(new FabricItemSettings().maxCount(1));
+        super(new Item.Settings().maxCount(1));
         this.tier = tier;
     }
 
@@ -26,7 +26,7 @@ public class LVLAddItem extends PokemonUseItem{
         int currentLevel = pokemon.getLevel(); // Current level
         // Get the increaseAmount from the config based on the provided tier
         int increaseAmount = getIncreaseAmountForTier(config, tier);
-        // Modify the Pokémon's friendship by the obtained increaseAmount
+        // Modify the PokÃƒÆ’Ã‚Â©mon's friendship by the obtained increaseAmount
         int newLevel = Math.min(currentLevel + increaseAmount, maxLevel);
         int actualIncrease = newLevel - currentLevel;
 
@@ -37,9 +37,9 @@ public class LVLAddItem extends PokemonUseItem{
 
         // if Level not max, increase by tier amount
         pokemon.setLevel(currentLevel+actualIncrease);
-        player.sendMessage(Text.of("Increased Pokémon's Level by " + actualIncrease));
+        player.sendMessage(Text.of("Increased PokÃƒÆ’Ã‚Â©mon's Level by " + actualIncrease));
         if (newLevel == maxLevel) { // if new Level amount is maxed, indicate to player
-            player.sendMessage(Text.of("Pokémon's Level is now at maximum"));
+            player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon's Level is now at maximum"));
         }
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;
@@ -55,3 +55,4 @@ public class LVLAddItem extends PokemonUseItem{
         return 0; // Default value if tierName not found in config
     }
 }
+

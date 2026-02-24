@@ -4,7 +4,6 @@ import com.cobblemon.mod.common.api.interaction.PokemonEntityInteraction.Ownersh
 import com.cobblemon.mod.common.api.storage.StoreCoordinates;
 import com.cobblemon.mod.common.entity.pokemon.PokemonEntity;
 import com.cobblemon.mod.common.pokemon.Pokemon;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -14,7 +13,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 
 public abstract class PokemonUseItem extends Item {
-    public PokemonUseItem(FabricItemSettings arg) {
+    public PokemonUseItem(Item.Settings arg) {
         super(arg);
     }
 
@@ -25,9 +24,9 @@ public abstract class PokemonUseItem extends Item {
             return ActionResult.PASS;
         }
 
-        //checks whether target is Pokémon
+        //checks whether target is PokÃƒÆ’Ã‚Â©mon
         if (!(target instanceof PokemonEntity pokemonEntity)) {
-            player.sendMessage(Text.of("Not a Pokémon"));
+            player.sendMessage(Text.of("Not a PokÃƒÆ’Ã‚Â©mon"));
             return ActionResult.FAIL;
         }
 
@@ -35,7 +34,7 @@ public abstract class PokemonUseItem extends Item {
         Pokemon pokemon = pokemonEntity.getPokemon();
         StoreCoordinates<?> storeCoordinates = pokemon.getStoreCoordinates().get();
 
-        // determines Pokémon ownership
+        // determines PokÃƒÆ’Ã‚Â©mon ownership
         Ownership ownership;
         if (storeCoordinates == null) {
             ownership = Ownership.WILD;
@@ -45,9 +44,9 @@ public abstract class PokemonUseItem extends Item {
             ownership = Ownership.OWNED_ANOTHER;
         }
 
-        // when you are not Pokémon's owner, give error
+        // when you are not PokÃƒÆ’Ã‚Â©mon's owner, give error
         if (ownership != Ownership.OWNER) {
-            player.sendMessage(Text.of("Not your Pokémon"));
+            player.sendMessage(Text.of("Not your PokÃƒÆ’Ã‚Â©mon"));
             return ActionResult.FAIL;
         }
 
