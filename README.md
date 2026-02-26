@@ -28,7 +28,7 @@ Each item has a unique function, from maximizing individual stats or randomizing
 
 ## Feedback and Contribution
 
-If you encounter any issues or have suggestions for improvement, feel free to create an issue or pull request on the GitHub repository -> [Fabric](https://github.com/Dragomordor/CobblemizerFabric.git) & [Forge](https://github.com/Dragomordor/CobblemizerForge.git)
+If you encounter any issues or have suggestions for improvement, feel free to create an issue or pull request on the GitHub repository -> [Fabric](https://github.com/TheGreatToba/CobblemizerForge-1.6.1)
 
 ## Credits
 
