@@ -26,20 +26,28 @@ public class LVLAddItem extends PokemonUseItem{
         int currentLevel = pokemon.getLevel(); // Current level
         // Get the increaseAmount from the config based on the provided tier
         int increaseAmount = getIncreaseAmountForTier(config, tier);
-        // Modify the PokÃƒÆ’Ã‚Â©mon's friendship by the obtained increaseAmount
+        // Modify the Pok\u00e9mon's level by the obtained increaseAmount
         int newLevel = Math.min(currentLevel + increaseAmount, maxLevel);
         int actualIncrease = newLevel - currentLevel;
 
         if (actualIncrease <= 0) { // If Level is already at max, return fail
-            player.sendMessage(Text.of("Level is already at maximum"));
+            player.sendMessage(Text.literal("This Pok\u00e9mon's level is already at maximum"));
             return ActionResult.FAIL;
         }
 
         // if Level not max, increase by tier amount
         pokemon.setLevel(currentLevel+actualIncrease);
-        player.sendMessage(Text.of("Increased PokÃƒÆ’Ã‚Â©mon's Level by " + actualIncrease));
+
+        // clear pending evolutions created by the level change
+        try {
+            pokemon.getEvolutionProxy().current().clear();
+        } catch (Exception ignored) {
+            // continue even if clearing fails
+        }
+
+        player.sendMessage(Text.literal("Increased ").append(pokemon.getDisplayName()).append(Text.literal("'s Level by " + actualIncrease)));
         if (newLevel == maxLevel) { // if new Level amount is maxed, indicate to player
-            player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon's Level is now at maximum"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append(" is now at maximum level"));
         }
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;

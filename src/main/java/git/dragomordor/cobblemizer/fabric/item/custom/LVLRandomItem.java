@@ -19,13 +19,21 @@ public class LVLRandomItem extends PokemonUseItem {
 
     @Override
     public ActionResult processInteraction(ItemStack itemStack, PlayerEntity player, PokemonEntity target, Pokemon pokemon) {
-        int maxLevel = Cobblemon.config.getMaxPokemonLevel(); // maximum level of PokÃƒÆ’Ã‚Â©mon allowed by config
+        int maxLevel = Cobblemon.config.getMaxPokemonLevel(); // maximum level of Pok\u00e9mon allowed by config
         int minLevel = 1;
         int randomLevel = new Random().nextInt(maxLevel-minLevel+1)+minLevel;
         pokemon.setLevel(randomLevel);
 
+        // clear any pending evolutions that may have been queued due to the level change
+        // prevents serialization errors when Cobblemon attempts to clone for the client
+        try {
+            pokemon.getEvolutionProxy().current().clear();
+        } catch (Exception ignored) {
+            // if something goes wrong we still want to continue using the item
+        }
+
         itemStack.decrement(1); // remove item after use
-        player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon level randomized"));
+        player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append(" level randomized"));
         return ActionResult.SUCCESS;
     }
 }
