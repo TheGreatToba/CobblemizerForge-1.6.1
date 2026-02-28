@@ -45,9 +45,9 @@ public class LVLAddItem extends PokemonUseItem{
             // continue even if clearing fails
         }
 
-        player.sendMessage(Text.literal("Increased ").append(pokemon.getDisplayName()).append(Text.literal("'s Level by " + actualIncrease)));
+            player.sendMessage(Text.literal("Increased ").append(pokemon.getDisplayName(false)).append(Text.literal("'s Level by " + actualIncrease)));
         if (newLevel == maxLevel) { // if new Level amount is maxed, indicate to player
-            player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append(" is now at maximum level"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName(false)).append(" is now at maximum level"));
         }
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;

@@ -57,13 +57,13 @@ public class NatureChangerItem extends  PokemonUseItem{
 
        // same nature is failed
        if (currentNature==nature) {
-           player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon is already " + natureDisplayNames.get(nature.getDisplayName())));
+           player.sendMessage(Text.of("PokÃƒÆ'Ã‚Â©mon is already " + natureDisplayNames.get(nature.getDisplayName())));
            return ActionResult.FAIL;
        }
 
        // change nature
         pokemon.setNature(nature);
-        player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon is now "+ natureDisplayNames.get(nature.getDisplayName())));
+        player.sendMessage(Text.of("PokÃƒÆ'Ã‚Â©mon is now "+ natureDisplayNames.get(nature.getDisplayName())));
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;
     }

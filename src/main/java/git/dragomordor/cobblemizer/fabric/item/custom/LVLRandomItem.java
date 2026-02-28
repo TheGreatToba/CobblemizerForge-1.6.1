@@ -33,7 +33,7 @@ public class LVLRandomItem extends PokemonUseItem {
         }
 
         itemStack.decrement(1); // remove item after use
-        player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append(" level randomized"));
+        player.sendMessage(Text.literal("").append(pokemon.getDisplayName(false)).append(" level randomized"));
         return ActionResult.SUCCESS;
     }
 }

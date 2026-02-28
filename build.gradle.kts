@@ -3,8 +3,8 @@ plugins {
     id("fabric-loom") version("1.7.4")
 }
 
-group = "git.dragomordor.cobblemaxer.fabric"
-version = "2.0.0"
+group = "com.thegreattoba.cobblemizer"
+version = "1.6.1+1.21.1hotfix"
 
 
 repositories {

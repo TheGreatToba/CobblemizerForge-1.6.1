@@ -1,12 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "cobblemizer",
-  "version": "2.0.0",
-  "name": "Cobblemon Customizer for Fabric",
+  "id": "cobblemoncity-cobblemizer",
+  "version": "1.6.1+1.21.1",
+  "name": "Cobblemizer (CobblemonCity Port)",
   "description": "Adds items that allow players to manipulate various stats and aesthetic characteristics of Pokémon within the game.",
   "icon": "assets/cobblemizer/icon.png",
   "authors": [
-    "Dragomordor"
+    "Dragomordor",
+    "TheGreatToba"
   ],
   "license": "MIT",
   "environment": "*",
