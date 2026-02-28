@@ -25,6 +25,20 @@ Tier/Rarity items, with values changeable in the config (cobblemizer/cobblemizer
 - **Cobblemon version:** Updated to work with Cobblemon version 1.4.1. (should still function with 1.4.0)
 - **Code changes:** Reorganized and redid large portions of code to introduce new tier system
 
+## [1.7.1 (February 28th, 2026)](#1-7-1)
+### Compatibility:
+- Updated for Cobblemon 1.7.1 and Minecraft 1.21.1.
+- Migrated PokeBalls API: Changed from `INSTANCE.getXYZ()` to static getter methods.
+- Updated `Pokemon.getDisplayName()` calls: Added boolean parameter for consistency.
+
+### Fixes:
+- Fixed initialization hang: CaughtBallChanger items are now lazily initialized to avoid blocking at startup.
+- Fixed garbled Pokémon names in chat messages: Migrated all item feedback messages to use `Text.literal().append(pokemon.getDisplayName(false)).append()` pattern for proper UTF-8 rendering.
+- Fixed stat operations: IVRandomItem and IVMaxerItem now iterate only over 6 permanent stats (HP, ATTACK, DEFENCE, SPECIAL_ATTACK, SPECIAL_DEFENCE, SPEED) instead of all stats, excluding invalid accuracy/evasion stats.
+
+### Updated Items:
+- EVAddItem, IVAddItem, FriendshipAddItem, NatureChangerItem, GenderSwapItem, ShinySwapItem, CaughtBallChangerItem: All now correctly display Pokémon names in player feedback.
+
 ## [1.6.1 (February 27th, 2026)](#1-6-1)
 ### Fixes:
 - Prevented server crash caused by level-altering items (Level Randomizer and Level Add). After changing a Pokémon's level the evolution proxy is cleared to discard any queued evolutions, avoiding serialization errors with temporary stats (accuracy/evasion).
