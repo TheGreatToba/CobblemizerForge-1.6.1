@@ -24,39 +24,38 @@ public class CobblemizerItems {
     public static final GenderSwapItem GENDER_SWAPPER = registerGenderSwapItem("gender_swapper",new GenderSwapItem());
     //ShinySwapItems
     public static final ShinySwapItem SHINY_SWAPPER = registerShinySwapItem("shiny_swapper",new ShinySwapItem());
-    //CaughtBallChangerItem
-            // no ancient balls in release version of cobblemon yet
-    public static final CaughtBallChangerItem AZURE_BALL_CB_CHANGER = registerCaughtBallChangerItem("azure_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getAzureBall()));
-    public static final CaughtBallChangerItem BEAST_BALL_CB_CHANGER = registerCaughtBallChangerItem("beast_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getBeastBall()));
-    public static final CaughtBallChangerItem CHERISH_BALL_CB_CHANGER = registerCaughtBallChangerItem("cherish_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getCherishBall()));
-    public static final CaughtBallChangerItem CITRINE_BALL_CB_CHANGER = registerCaughtBallChangerItem("citrine_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getCitrineBall()));
-    public static final CaughtBallChangerItem DIVE_BALL_CB_CHANGER = registerCaughtBallChangerItem("dive_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getDiveBall()));
-    public static final CaughtBallChangerItem DREAM_BALL_CB_CHANGER = registerCaughtBallChangerItem("dream_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getDreamBall()));
-    public static final CaughtBallChangerItem DUSK_BALL_CB_CHANGER = registerCaughtBallChangerItem("dusk_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getDuskBall()));
-    public static final CaughtBallChangerItem FAST_BALL_CB_CHANGER = registerCaughtBallChangerItem("fast_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getFastBall()));
-    public static final CaughtBallChangerItem FRIEND_BALL_CB_CHANGER = registerCaughtBallChangerItem("friend_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getFriendBall()));
-    public static final CaughtBallChangerItem GREAT_BALL_CB_CHANGER = registerCaughtBallChangerItem("great_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getGreatBall()));
-    public static final CaughtBallChangerItem HEAL_BALL_CB_CHANGER = registerCaughtBallChangerItem("heal_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getHealBall()));
-    public static final CaughtBallChangerItem HEAVY_BALL_CB_CHANGER = registerCaughtBallChangerItem("heavy_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getHeavyBall()));
-    public static final CaughtBallChangerItem LEVEL_BALL_CB_CHANGER = registerCaughtBallChangerItem("level_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLevelBall()));
-    public static final CaughtBallChangerItem LOVE_BALL_CB_CHANGER = registerCaughtBallChangerItem("love_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLoveBall()));
-    public static final CaughtBallChangerItem LURE_BALL_CB_CHANGER = registerCaughtBallChangerItem("lure_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLureBall()));
-    public static final CaughtBallChangerItem LUXURY_BALL_CB_CHANGER = registerCaughtBallChangerItem("luxury_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLuxuryBall()));
-    public static final CaughtBallChangerItem MASTER_BALL_CB_CHANGER = registerCaughtBallChangerItem("master_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getMasterBall()));
-    public static final CaughtBallChangerItem MOON_BALL_CB_CHANGER = registerCaughtBallChangerItem("moon_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getMoonBall()));
-    public static final CaughtBallChangerItem NEST_BALL_CB_CHANGER = registerCaughtBallChangerItem("nest_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getNestBall()));
-    public static final CaughtBallChangerItem NET_BALL_CB_CHANGER = registerCaughtBallChangerItem("net_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getNetBall()));
-    public static final CaughtBallChangerItem PARK_BALL_CB_CHANGER = registerCaughtBallChangerItem("park_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getParkBall()));
-    public static final CaughtBallChangerItem POKE_BALL_CB_CHANGER = registerCaughtBallChangerItem("poke_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getPokeBall()));
-    public static final CaughtBallChangerItem PREMIER_BALL_CB_CHANGER = registerCaughtBallChangerItem("premier_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getPremierBall()));
-    public static final CaughtBallChangerItem REPEAT_BALL_CB_CHANGER = registerCaughtBallChangerItem("repeat_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getRepeatBall()));
-    public static final CaughtBallChangerItem ROSEATE_BALL_CB_CHANGER = registerCaughtBallChangerItem("roseate_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getRoseateBall()));
-    public static final CaughtBallChangerItem SAFARI_BALL_CB_CHANGER = registerCaughtBallChangerItem("safari_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getSafariBall()));
-    public static final CaughtBallChangerItem SLATE_BALL_CB_CHANGER = registerCaughtBallChangerItem("slate_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getSlateBall()));
-    public static final CaughtBallChangerItem SPORT_BALL_CB_CHANGER = registerCaughtBallChangerItem("sport_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getSportBall()));
-    public static final CaughtBallChangerItem TIMER_BALL_CB_CHANGER = registerCaughtBallChangerItem("timer_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getTimerBall()));
-    public static final CaughtBallChangerItem ULTRA_BALL_CB_CHANGER = registerCaughtBallChangerItem("ultra_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getUltraBall()));
-    public static final CaughtBallChangerItem VERDANT_BALL_CB_CHANGER = registerCaughtBallChangerItem("verdant_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getVerdantBall()));
+    //CaughtBallChangerItem - lazy initialized to avoid PokeBalls hang during mod init
+    public static CaughtBallChangerItem AZURE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem BEAST_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem CHERISH_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem CITRINE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem DIVE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem DREAM_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem DUSK_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem FAST_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem FRIEND_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem GREAT_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem HEAL_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem HEAVY_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem LEVEL_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem LOVE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem LURE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem LUXURY_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem MASTER_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem MOON_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem NEST_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem NET_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem PARK_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem POKE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem PREMIER_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem REPEAT_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem ROSEATE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem SAFARI_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem SLATE_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem SPORT_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem TIMER_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem ULTRA_BALL_CB_CHANGER;
+    public static CaughtBallChangerItem VERDANT_BALL_CB_CHANGER;
     // FriendshipAddItem
     public static final FriendshipAddItem FRIENDSHIP_ADD_COMMON = registerFriendshipAddItem("friendship_add_common", new FriendshipAddItem("COMMON"));
     public static final FriendshipAddItem FRIENDSHIP_ADD_UNCOMMON = registerFriendshipAddItem("friendship_add_uncommon", new FriendshipAddItem("UNCOMMON"));
@@ -236,7 +235,48 @@ public class CobblemizerItems {
     public static void registerModItems() {
         CobblemizerMod.LOGGER.info("Register Mod Items for " + CobblemizerMod.MODID) ;
 
+        // Initialize PokeBalls-dependent items (must be called after Cobblemon loads)
+        initializePokeBallItems();
+
         // creative mode tab entries
         CobblemizerItemGroups.registerItemGroups();
+    }
+
+    private static void initializePokeBallItems() {
+        try {
+            AZURE_BALL_CB_CHANGER = registerCaughtBallChangerItem("azure_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getAzureBall()));
+            BEAST_BALL_CB_CHANGER = registerCaughtBallChangerItem("beast_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getBeastBall()));
+            CHERISH_BALL_CB_CHANGER = registerCaughtBallChangerItem("cherish_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getCherishBall()));
+            CITRINE_BALL_CB_CHANGER = registerCaughtBallChangerItem("citrine_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getCitrineBall()));
+            DIVE_BALL_CB_CHANGER = registerCaughtBallChangerItem("dive_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getDiveBall()));
+            DREAM_BALL_CB_CHANGER = registerCaughtBallChangerItem("dream_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getDreamBall()));
+            DUSK_BALL_CB_CHANGER = registerCaughtBallChangerItem("dusk_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getDuskBall()));
+            FAST_BALL_CB_CHANGER = registerCaughtBallChangerItem("fast_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getFastBall()));
+            FRIEND_BALL_CB_CHANGER = registerCaughtBallChangerItem("friend_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getFriendBall()));
+            GREAT_BALL_CB_CHANGER = registerCaughtBallChangerItem("great_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getGreatBall()));
+            HEAL_BALL_CB_CHANGER = registerCaughtBallChangerItem("heal_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getHealBall()));
+            HEAVY_BALL_CB_CHANGER = registerCaughtBallChangerItem("heavy_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getHeavyBall()));
+            LEVEL_BALL_CB_CHANGER = registerCaughtBallChangerItem("level_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLevelBall()));
+            LOVE_BALL_CB_CHANGER = registerCaughtBallChangerItem("love_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLoveBall()));
+            LURE_BALL_CB_CHANGER = registerCaughtBallChangerItem("lure_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLureBall()));
+            LUXURY_BALL_CB_CHANGER = registerCaughtBallChangerItem("luxury_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getLuxuryBall()));
+            MASTER_BALL_CB_CHANGER = registerCaughtBallChangerItem("master_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getMasterBall()));
+            MOON_BALL_CB_CHANGER = registerCaughtBallChangerItem("moon_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getMoonBall()));
+            NEST_BALL_CB_CHANGER = registerCaughtBallChangerItem("nest_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getNestBall()));
+            NET_BALL_CB_CHANGER = registerCaughtBallChangerItem("net_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getNetBall()));
+            PARK_BALL_CB_CHANGER = registerCaughtBallChangerItem("park_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getParkBall()));
+            POKE_BALL_CB_CHANGER = registerCaughtBallChangerItem("poke_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getPokeBall()));
+            PREMIER_BALL_CB_CHANGER = registerCaughtBallChangerItem("premier_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getPremierBall()));
+            REPEAT_BALL_CB_CHANGER = registerCaughtBallChangerItem("repeat_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getRepeatBall()));
+            ROSEATE_BALL_CB_CHANGER = registerCaughtBallChangerItem("roseate_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getRoseateBall()));
+            SAFARI_BALL_CB_CHANGER = registerCaughtBallChangerItem("safari_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getSafariBall()));
+            SLATE_BALL_CB_CHANGER = registerCaughtBallChangerItem("slate_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getSlateBall()));
+            SPORT_BALL_CB_CHANGER = registerCaughtBallChangerItem("sport_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getSportBall()));
+            TIMER_BALL_CB_CHANGER = registerCaughtBallChangerItem("timer_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getTimerBall()));
+            ULTRA_BALL_CB_CHANGER = registerCaughtBallChangerItem("ultra_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getUltraBall()));
+            VERDANT_BALL_CB_CHANGER = registerCaughtBallChangerItem("verdant_ball_cb_changer", new CaughtBallChangerItem(PokeBalls.getVerdantBall()));
+        } catch (Exception e) {
+            CobblemizerMod.LOGGER.error("Failed to initialize PokeBall items", e);
+        }
     }
 }
