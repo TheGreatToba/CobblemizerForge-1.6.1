@@ -19,13 +19,23 @@ public class IVMaxerItem extends PokemonUseItem {
 
     @Override
     public ActionResult processInteraction(ItemStack itemStack, PlayerEntity player, PokemonEntity target, Pokemon pokemon) {
-        IVs ivs = pokemon.getIvs(); // Access the IVs of the PokÃƒÆ’Ã‚Â©mon
+        IVs ivs = pokemon.getIvs(); // Access the IVs of the Pokemon
+
+        // Define the 6 permanent stats (excluding accuracy and evasion)
+        Stat[] permanentStats = {
+            Stats.HP,
+            Stats.ATTACK,
+            Stats.DEFENCE,
+            Stats.SPECIAL_ATTACK,
+            Stats.SPECIAL_DEFENCE,
+            Stats.SPEED
+        };
+
         // max stats
         int IVsMaxed = 0;
-        for (Stat stat : Stats.values()) { // checks how many stats are maxed
+        for (Stat stat : permanentStats) { // checks how many stats are maxed
             Integer currentIV = ivs.get(stat);
-            // Skip stats with null values
-            if (currentIV == null) { // skip null since Evasion and Accuracy are not IV's
+            if (currentIV == null || currentIV == 0) { // Handle null/zero values
                 continue;
             }
             if (currentIV == IVs.MAX_VALUE) {
@@ -37,11 +47,7 @@ public class IVMaxerItem extends PokemonUseItem {
             return ActionResult.FAIL;
         }
         // Pass
-        for (Stat stat : Stats.values()) {
-            Integer currentIV = ivs.get(stat);
-            if (currentIV == null) {
-                continue;
-            }
+        for (Stat stat : permanentStats) {
             ivs.set(stat, IVs.MAX_VALUE);
         }
         // maximise all stats
@@ -50,4 +56,3 @@ public class IVMaxerItem extends PokemonUseItem {
         return ActionResult.SUCCESS;
     }
 }
-

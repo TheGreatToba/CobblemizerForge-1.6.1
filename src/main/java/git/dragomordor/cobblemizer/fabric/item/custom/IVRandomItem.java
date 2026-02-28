@@ -23,8 +23,18 @@ public class IVRandomItem extends PokemonUseItem {
         IVs ivs = pokemon.getIvs(); // Access the IVs of the PokÃƒÆ’Ã‚Â©mon
         Random random = new Random(); // random number generator
 
+        // Define the 6 permanent stats (excluding accuracy and evasion)
+        Stat[] permanentStats = {
+            Stats.HP,
+            Stats.ATTACK,
+            Stats.DEFENCE,
+            Stats.SPECIAL_ATTACK,
+            Stats.SPECIAL_DEFENCE,
+            Stats.SPEED
+        };
+
         // randomizes all IV stats
-        for (Stat stat : Stats.values()) {
+        for (Stat stat : permanentStats) {
             int randomValue = random.nextInt(IVs.MAX_VALUE+1); // Generate a random value between 0 and MAX_STAT_VALUE (inclusive)
             ivs.set(stat, randomValue); // Set each IV stat to the generated random value
         }
