@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.thegreattoba.cobblemizer"
-version = "1.6.1+1.21.1hotfix"
+version = "1.7.1+1.21.1"
 
 
 repositories {
