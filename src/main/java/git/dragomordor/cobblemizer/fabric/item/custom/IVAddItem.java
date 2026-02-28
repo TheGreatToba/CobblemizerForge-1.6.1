@@ -41,9 +41,9 @@ public class IVAddItem extends PokemonUseItem {
 
         // if IV not max, increase by tier amount
         IVs.set(statToBoost, IVcurrentAmount+actualIncrease);
-        player.sendMessage(Text.of("Increased PokÃƒÆ’Ã‚Â©mon's " + statToBoost.getDisplayName().getString() + " IV by " + actualIncrease));
+        player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append("'s " + statToBoost.getDisplayName().getString() + " IV by " + actualIncrease));
         if (newIVAmount == maxIV) { // if new IV amount is maxed, indicate to player
-            player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon's " + statToBoost.getDisplayName().getString() + " IV is now at maximum"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append("'s " + statToBoost.getDisplayName().getString() + " IV is now at maximum"));
         }
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;

@@ -24,12 +24,12 @@ public class CaughtBallChangerItem extends PokemonUseItem{
 
         //if the current ball is the same as the changed one, stop the change
         if (currentball == selectedBall) {
-            player.sendMessage(Text.of("The PokÃƒÆ’Ã‚Â©mon has the same caught ball"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append(" has the same caught ball"));
             return ActionResult.FAIL;
         }
         // change caught ball
         pokemon.setCaughtBall(selectedBall);
-        player.sendMessage(Text.of("The PokÃƒÆ’Ã‚Â©mon's caught ball has been changed to " + selectedBall.item().getName().getString()));
+        player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append("'s caught ball has been changed to " + selectedBall.item().getName().getString()));
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;
     }

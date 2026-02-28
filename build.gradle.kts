@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "git.dragomordor.cobblemaxer.fabric"
-version = "2.0.0"
+version = "1.6.1-1.21.1"
 
 
 repositories {

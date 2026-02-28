@@ -22,10 +22,17 @@ public class IVMaxerItem extends PokemonUseItem {
         IVs ivs = pokemon.getIvs(); // Access the IVs of the PokÃƒÆ’Ã‚Â©mon
         // max stats
         int IVsMaxed = 0;
-        for (Stat stat : Stats.values()) { // checks how many stats are maxed
+        Stat[] stats = new Stat[]{
+                Stats.HP,
+                Stats.ATTACK,
+                Stats.DEFENCE,
+                Stats.SPECIAL_ATTACK,
+                Stats.SPECIAL_DEFENCE,
+                Stats.SPEED
+        };
+        for (Stat stat : stats) { // checks how many stats are maxed
             Integer currentIV = ivs.get(stat);
-            // Skip stats with null values
-            if (currentIV == null) { // skip null since Evasion and Accuracy are not IV's
+            if (currentIV == null) { // should not be null for permanent stats, but guard anyway
                 continue;
             }
             if (currentIV == IVs.MAX_VALUE) {
@@ -36,8 +43,8 @@ public class IVMaxerItem extends PokemonUseItem {
             player.sendMessage(Text.of("All IVs at max already!"));
             return ActionResult.FAIL;
         }
-        // Pass
-        for (Stat stat : Stats.values()) {
+        // Pass: set the six permanent IV stats to max
+        for (Stat stat : stats) {
             Integer currentIV = ivs.get(stat);
             if (currentIV == null) {
                 continue;

@@ -21,7 +21,7 @@ public class ShinySwapItem extends PokemonUseItem{
         pokemon.setShiny(!isShiny);
 
         String shinyMessage = isShiny ? "no longer shiny" : "now shiny";
-        player.sendMessage(Text.of("The PokÃƒÆ’Ã‚Â©mon is " + shinyMessage));
+        player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append(" is " + shinyMessage));
         itemStack.decrement(1); // remove item after use
 
         return ActionResult.SUCCESS;

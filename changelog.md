@@ -38,3 +38,12 @@ Tier/Rarity items, with values changeable in the config (cobblemizer/cobblemizer
 ### Notes:
 - Applied the same evolution-clear logic and message improvements to both LVLRandomItem and LVLAddItem.
 - Used `pokemon.getDisplayName()` to retrieve and respect Pokémon nicknames in messages.
+
+## [1.6.1-1.21.1 (February 28th, 2026)](#1-6-1-1-21-1)
+### Release:
+- Built and remapped artifact `CobblemizerFabric-1.6.1-1.21.1.jar` for Fabric/Minecraft 1.21.1.
+### Fixes & Improvements:
+- Limit IV/EV operations to the six permanent stats to avoid touching temporary stats (accuracy/evasion).
+- Use `pokemon.getDisplayName()` for player-facing messages so nicknames and formatting are preserved.
+- Various message and encoding fixes; cleared evolution proxy after level changes to avoid serialization issues.
+

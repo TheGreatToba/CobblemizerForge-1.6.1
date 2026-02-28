@@ -27,8 +27,16 @@ public class EVRandomItem extends PokemonUseItem {
         EVs evs = pokemon.getEvs(); // Access the EVs of the PokÃƒÆ’Ã‚Â©mon
         Random random = new Random(); // random number generator
 
-        // Randomize all EV stats
-        for (Stat stat : Stats.values()) {
+        // Randomize the six permanent EV stats only
+        Stat[] stats = new Stat[]{
+                Stats.HP,
+                Stats.ATTACK,
+                Stats.DEFENCE,
+                Stats.SPECIAL_ATTACK,
+                Stats.SPECIAL_DEFENCE,
+                Stats.SPEED
+        };
+        for (Stat stat : stats) {
             int randomValue = random.nextInt(EVs.MAX_STAT_VALUE + 1); // Generate a random value between 0 and MAX_STAT_VALUE (inclusive)
             evs.set(stat, randomValue); // Set each EV stat to the generated random value
         }

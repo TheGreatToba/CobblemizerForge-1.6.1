@@ -33,13 +33,13 @@ public class FriendshipAddItem extends PokemonUseItem{
 
         if (!increasedFriendship || actualIncrease==0) { // fail if friendship is at max already
             // If friendship is already at max, return fail
-            player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon's friendship is already at max"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append("'s friendship is already at max"));
             return ActionResult.FAIL;
         }
 
-        player.sendMessage(Text.of("Increased PokÃƒÆ’Ã‚Â©mon's friendship by " + actualIncrease));
+        player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append("'s friendship increased by " + actualIncrease));
         if (newFriendship == maxFriendship) {
-            player.sendMessage(Text.of("PokÃƒÆ’Ã‚Â©mon's friendship is now at max"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName()).append("'s friendship is now at max"));
         }
 
         itemStack.decrement(1); // remove item after use
