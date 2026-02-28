@@ -41,9 +41,9 @@ public class EVAddItem extends PokemonUseItem {
 
         // if EV not max, increase by tier amount
         evs.add(statToBoost, actualIncrease);
-        player.sendMessage(Text.of("Increased PokÃƒÆ'Ã‚Â©mon's " + statToBoost.getDisplayName().getString() + " EV by " + actualIncrease));
+        player.sendMessage(Text.literal("Increased ").append(pokemon.getDisplayName(false)).append(Text.literal("'s " + statToBoost.getDisplayName().getString() + " EV by " + actualIncrease)));
         if (newEVAmount == maxEV) { // if new EV amount is maxed, indicate to player
-            player.sendMessage(Text.of("PokÃƒÆ'Ã‚Â©mon's " + statToBoost.getDisplayName().getString() + " EV is now at maximum"));
+            player.sendMessage(Text.literal("").append(pokemon.getDisplayName(false)).append("'s " + statToBoost.getDisplayName().getString() + " EV is now at maximum"));
         }
         itemStack.decrement(1); // remove item after use
         return ActionResult.SUCCESS;

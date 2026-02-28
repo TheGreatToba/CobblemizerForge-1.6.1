@@ -30,13 +30,13 @@ public class GenderSwapItem extends PokemonUseItem {
             pokemon.setGender(newGender);
             String genderName = newGender.name().toLowerCase(); // Get the lowercase gender name
             String formattedGender = Character.toUpperCase(genderName.charAt(0)) + genderName.substring(1); // Convert to title case
-            player.sendMessage(Text.of("The PokÃƒÆ’Ã‚Â©mon's gender has been changed to "+formattedGender));
+            player.sendMessage(Text.literal("The ").append(pokemon.getDisplayName(false)).append("'s gender has been changed to "+formattedGender));
         } else if (gender == Gender.FEMALE) {
             Gender newGender = Gender.MALE;
             pokemon.setGender(newGender);
             String genderName = newGender.name().toLowerCase(); // Get the lowercase gender name
             String formattedGender = Character.toUpperCase(genderName.charAt(0)) + genderName.substring(1); // Convert to title case
-            player.sendMessage(Text.of("The PokÃƒÆ’Ã‚Â©mon's gender has been changed to "+formattedGender));
+            player.sendMessage(Text.literal("The ").append(pokemon.getDisplayName(false)).append("'s gender has been changed to "+formattedGender));
         }
 
         itemStack.decrement(1); // remove item after use
